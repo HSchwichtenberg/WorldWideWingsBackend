@@ -6,5 +6,4 @@
 <h1>@ViewData["Title"]</h1>
 
 <p><a href="https://www.IT-Visions.de" target="_blank">(C) Dr. Holger Schwichtenberg @DateTime.Now.Year</a></p>
-<p>@System.Runtime.InteropServices.RuntimeInformation.FrameworkDescription</p>
-<p>Entity Framework Core @ITVisions.EFCore.EFCoreUtil.GetEFCoreVersion().ToString()</p>
+<p>@((Html.Raw(new ITVisions.EnvInfo().GetHTMLString())))</p>

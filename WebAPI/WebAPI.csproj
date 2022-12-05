@@ -3,8 +3,15 @@
  <PropertyGroup>
   <TargetFramework>net7.0</TargetFramework>
   <Nullable>enable</Nullable>
+  <Version>7.0.1</Version>
   <ImplicitUsings>enable</ImplicitUsings>
  </PropertyGroup>
+
+ <ItemGroup>
+   <Compile Remove="Controllers\Booking.cs" />
+   <Compile Remove="Controllers\BookingController.cs" />
+   <Compile Remove="Controllers\PassengerController.cs" />
+ </ItemGroup>
 
  <!--Pakete-->
  <ItemGroup>

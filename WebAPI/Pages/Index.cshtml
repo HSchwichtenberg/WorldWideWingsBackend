@@ -5,10 +5,16 @@
 }
 
 <div>
+ <a target="_blank " href="https://www.world-wide-wings.de">
+  <img src="~/worldwidewings_logo.jpg" width="200" align="right" /></a>
  <h1>World Wide Wings - Backend</h1>
+ <p>
+  Öffentliches ASP.NET Core-basiertes WebAPI mit Flugdaten der fiktiven Fluggesellschaft <a target="_blank " href="https://www.world-wide-wings.de">World Wide Wings</a> für Schulungs- und Testzwecke. .
+ </p>
  <p><a href="https://www.IT-Visions.de" target="_blank">(C) Dr. Holger Schwichtenberg @DateTime.Now.Year</a></p>
- <p>@System.Runtime.InteropServices.RuntimeInformation.FrameworkDescription</p>
- <p>Entity Framework Core @ITVisions.EFCore.EFCoreUtil.GetEFCoreVersion().ToString()</p>
+
+ <p>Runtime: @System.Runtime.InteropServices.RuntimeInformation.FrameworkDescription mit Entity Framework Core @ITVisions.EFCore.EFCoreUtil.GetEFCoreVersion().ToString()</p>
+ <p>Application Version: @System.Reflection.Assembly.GetExecutingAssembly().GetName().Version</p>
 </div>
 
 @*@if (Model.FlightSet != null)
@@ -29,6 +35,7 @@
 <h2>API-Beispiele</h2>
 
 <ul>
+ <li><a href="/api/Airport">/api/Airport</a></li>
  <li><a href="/api/Flight/101">/api/Flight/101</a></li>
  <li><a href="/api/Flight">/api/Flight</a></li>
  <li><a href="/api/Flight/berlin">/api/Flight/berlin</a></li>
