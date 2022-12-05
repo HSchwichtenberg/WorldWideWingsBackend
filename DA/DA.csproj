@@ -1,0 +1,44 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+ <!--Zentrale Projekteinstellungen-->
+ <PropertyGroup>
+  <TargetFramework>net7.0</TargetFramework>
+ </PropertyGroup>
+
+ <!--Pakete-->
+ <ItemGroup>
+  <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="7.0.*" />
+  <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.*" />
+  <PackageReference Include="ITV.AppUtil.NETStandard" Version="9.1.0" />
+  <PackageReference Include="ITV.EFCoreUtil" Version="3.1.0" />
+ </ItemGroup>
+
+ <!--Projektreferenzen-->
+ <ItemGroup>
+  <ProjectReference Include="..\BO\BO.csproj" />
+ </ItemGroup>
+ <ItemGroup>
+   <None Update="T4Demo\EFCore\DbContext.t4">
+     <Generator>TextTemplatingFileGenerator</Generator>
+     <LastGenOutput>DbContext.txt</LastGenOutput>
+   </None>
+   <None Update="T4Demo\EFCore\DbContext.txt">
+     <DesignTime>True</DesignTime>
+     <AutoGen>True</AutoGen>
+     <DependentUpon>DbContext.t4</DependentUpon>
+   </None>
+ </ItemGroup>
+ <ItemGroup>
+   <Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
+ </ItemGroup>
+
+ <!--Source Control-->
+ <PropertyGroup Label="Globals">
+  <SccProjectName>SAK</SccProjectName>
+  <SccProvider>SAK</SccProvider>
+  <SccAuxPath>SAK</SccAuxPath>
+  <SccLocalPath>SAK</SccLocalPath>
+  <UserSecretsId>d6c0a0c0-b9ab-494e-8e90-d594890f4741</UserSecretsId>
+ </PropertyGroup>
+
+</Project>

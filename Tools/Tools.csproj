@@ -1,0 +1,55 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+ <!--Anwendungsart-->
+ <PropertyGroup>
+  <OutputType>Exe</OutputType>
+  <TargetFramework>net7.0</TargetFramework>
+  <IsPackable>false</IsPackable>
+ </PropertyGroup>
+
+ <!--Pakete-->
+ <ItemGroup>
+  <PackageReference Include="ITV.AppUtil.NETStandard" Version="9.1.0" />
+  <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.*" />
+  <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.*">
+   <PrivateAssets>all</PrivateAssets>
+   <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+  </PackageReference>
+ </ItemGroup>
+
+ <!--Projektreferenzen-->
+ <ItemGroup>
+  <ProjectReference Include="..\BO\BO.csproj" />
+  <ProjectReference Include="..\DA\DA.csproj" />
+ </ItemGroup>
+ <ItemGroup>
+   <None Update="HelloWorld.tt">
+     <Generator>TextTemplatingFileGenerator</Generator>
+     <LastGenOutput>HelloWorld.txt</LastGenOutput>
+   </None>
+   <None Update="HelloWorld.txt">
+     <DesignTime>True</DesignTime>
+     <AutoGen>True</AutoGen>
+     <DependentUpon>HelloWorld.tt</DependentUpon>
+   </None>
+ </ItemGroup>
+ <ItemGroup>
+   <Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
+ </ItemGroup>
+ <ItemGroup>
+   <Compile Update="HelloWorld.cs">
+     <DesignTime>True</DesignTime>
+     <AutoGen>True</AutoGen>
+     <DependentUpon>HelloWorld.tt</DependentUpon>
+   </Compile>
+ </ItemGroup>
+
+ <!--Source Control-->
+ <PropertyGroup Label="Globals">
+  <SccProjectName>SAK</SccProjectName>
+  <SccProvider>SAK</SccProvider>
+  <SccAuxPath>SAK</SccAuxPath>
+  <SccLocalPath>SAK</SccLocalPath>
+ </PropertyGroup>
+
+</Project>

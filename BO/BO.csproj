@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+ <!--Zentrale Projekteinstellungen-->
+ <PropertyGroup>
+  <TargetFramework>net7.0</TargetFramework>
+  <Langversion>Preview</Langversion>
+ </PropertyGroup>
+
+ <!--Pakete-->
+ <ItemGroup>
+  <PackageReference Include="ITV.AppUtil.NETStandard" Version="9.1.0" />
+  <PackageReference Include="System.ComponentModel.Annotations" Version="6.0.0-preview.4.21253.7" />
+  <PackageReference Include="Microsoft.EntityFrameworkCore.Abstractions" Version="7.0.0" />
+ </ItemGroup>
+
+ <!--Source Control-->
+ <PropertyGroup Label="Globals">
+  <SccProjectName>SAK</SccProjectName>
+  <SccProvider>SAK</SccProvider>
+  <SccAuxPath>SAK</SccAuxPath>
+  <SccLocalPath>SAK</SccLocalPath>
+  <UserSecretsId>1dbf4426-0272-481e-b4d1-5d1efa76794d</UserSecretsId>
+ </PropertyGroup>
+
+</Project>

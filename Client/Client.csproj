@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+ <!--Anwendungsart-->
+ <PropertyGroup>
+  <OutputType>Exe</OutputType>
+  <TargetFramework>net7.0</TargetFramework>
+ </PropertyGroup>
+
+ <!--Paket-->
+ <ItemGroup>
+  <PackageReference Include="ITV.AppUtil.NETStandard" Version="9.1.0" />
+  <PackageReference Include="ITV.EFCoreUtil" Version="3.1.0" />
+ </ItemGroup>
+
+ <!--Projektreferenzen-->
+ <ItemGroup>
+  <ProjectReference Include="..\BL\BL.csproj" />
+  <ProjectReference Include="..\BO\BO.csproj" />
+ </ItemGroup>
+
+ <!--Source Control-->
+ <PropertyGroup Label="Globals">
+  <SccProjectName>SAK</SccProjectName>
+  <SccProvider>SAK</SccProvider>
+  <SccAuxPath>SAK</SccAuxPath>
+  <SccLocalPath>SAK</SccLocalPath>
+ </PropertyGroup>
+
+</Project>

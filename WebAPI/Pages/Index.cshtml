@@ -1,0 +1,26 @@
+﻿@page
+@model IndexModel
+@{
+ ViewData["Title"] = "Home page";
+}
+
+<div>
+ <h1>Herzlich Willkommen!</h1>
+ <p><a href="https://www.IT-Visions.de" target="_blank">(C) Dr. Holger Schwichtenberg @DateTime.Now.Year</a></p>
+ <p>@System.Runtime.InteropServices.RuntimeInformation.FrameworkDescription</p>
+ <p>Entity Framework Core @ITVisions.EFCore.EFCoreUtil.GetEFCoreVersion().ToString()</p>
+</div>
+
+@*@if (Model.FlightSet != null)
+{
+ <div>
+  @foreach (var f in Model.FlightSet)
+  {
+   <div class="row">
+    <span class="col">@f.FlightNo</span>
+    <span class="col">@f.Departure</span>
+    <span class="col">@f.Destination</span>
+   </div>
+  }
+ </div>
+}*@

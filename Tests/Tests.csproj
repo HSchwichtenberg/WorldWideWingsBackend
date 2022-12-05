@@ -1,0 +1,46 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+ <!--Zentrale Projekteinstellungen-->
+ <PropertyGroup>
+  <TargetFramework>net7.0</TargetFramework>
+  <IsPackable>false</IsPackable>
+ </PropertyGroup>
+
+ <!--Pakete-->
+ <ItemGroup>
+  <PackageReference Include="ITV.AppUtil.NETStandard" Version="9.1.0" />
+  <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.*" />
+ </ItemGroup>
+
+ <!--Pakete für Tests-->
+ <ItemGroup>
+  <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.5.0-preview-20221003-04" />
+  <PackageReference Include="xunit" Version="2.4.2" />
+  <PackageReference Include="Xunit.Priority" Version="1.1.6" />
+  <PackageReference Include="DeepEqual" Version="4.2.1" />
+  <PackageReference Include="xunit.runner.visualstudio" Version="2.4.5">
+   <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+   <PrivateAssets>all</PrivateAssets>
+  </PackageReference>
+  <PackageReference Include="coverlet.collector" Version="3.2.0">
+   <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+   <PrivateAssets>all</PrivateAssets>
+  </PackageReference>
+ </ItemGroup>
+
+ <!--Projektreferenzen-->
+ <ItemGroup>
+  <ProjectReference Include="..\BL\BL.csproj" />
+  <ProjectReference Include="..\BO\BO.csproj" />
+  <ProjectReference Include="..\DA\DA.csproj" />
+ </ItemGroup>
+
+ <!--Source Control-->
+ <PropertyGroup Label="Globals">
+  <SccProjectName>SAK</SccProjectName>
+  <SccProvider>SAK</SccProvider>
+  <SccAuxPath>SAK</SccAuxPath>
+  <SccLocalPath>SAK</SccLocalPath>
+ </PropertyGroup>
+
+</Project>

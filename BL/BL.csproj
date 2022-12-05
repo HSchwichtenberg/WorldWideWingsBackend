@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+ <!--Zentrale Projekteinstellungen-->
+  <PropertyGroup>
+   <TargetFramework>net7.0</TargetFramework>
+  </PropertyGroup>
+
+ <!--Pakete-->
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.*" />
+   <PackageReference Include="ITV.AppUtil.NETStandard" Version="9.1.0" />
+  </ItemGroup>
+
+ <!--Projektreferenzen-->
+  <ItemGroup>
+    <ProjectReference Include="..\BO\BO.csproj" />
+    <ProjectReference Include="..\DA\DA.csproj" />
+  </ItemGroup>
+
+ <!--Source Control-->
+ <PropertyGroup Label="Globals">
+  <SccProjectName>SAK</SccProjectName>
+  <SccProvider>SAK</SccProvider>
+  <SccAuxPath>SAK</SccAuxPath>
+  <SccLocalPath>SAK</SccLocalPath>
+ </PropertyGroup>
+
+</Project>
