@@ -31,12 +31,12 @@ public class FlightController : Controller
  /// <param name="depature"></param>
  /// <param name="destination"></param>
  /// <returns></returns>
- [HttpGet("{depature?}/{destination?}")]
- public List<Flight> Get(string depature="", string? destination = "")
+ [HttpGet("{depature?}/{destination?}/{skip:int?}/{take:int?}")]
+ public List<Flight> Get(string depature="", string? destination = "", int skip = -1, int take = -1)
  {
   using (var bm = new FlightManager())
   {
-   return bm.GetFlightSet(depature, destination);
+   return bm.GetFlightSet(depature, destination, skip, take);
   }
  }
 
