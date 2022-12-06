@@ -1,15 +1,21 @@
 
+using System.Runtime.CompilerServices;
+
 namespace WebAPI;
 
 public class Program
 {
  public static void Main(string[] args)
  {
+
   var builder = WebApplication.CreateBuilder(args);
 
-  // Add services to the container.
+  // Get Connection String
+  DA.WWWingsContext.ConnectionString = builder.Configuration.GetConnectionString("WWWings");
 
-  builder.Services.AddControllers();
+ // Add services to the container.
+
+ builder.Services.AddControllers();
   builder.Services.AddRazorPages();
 
   // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

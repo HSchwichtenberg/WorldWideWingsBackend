@@ -1,4 +1,5 @@
 ﻿@page
+@using Microsoft.EntityFrameworkCore
 @model IndexModel
 @{
  ViewData["Title"] = "Home page";
@@ -15,6 +16,8 @@
 
  <p>Runtime: @System.Runtime.InteropServices.RuntimeInformation.FrameworkDescription mit Entity Framework Core @ITVisions.EFCore.EFCoreUtil.GetEFCoreVersion().ToString()</p>
  <p>Application Version: @System.Reflection.Assembly.GetExecutingAssembly().GetName().Version</p>
+
+ <p>Database: SQL Azure @(Model.SQLServerVersion)</p>
 </div>
 
 @*@if (Model.FlightSet != null)
@@ -35,10 +38,12 @@
 <h2>API-Beispiele</h2>
 
 <ul>
- <li><a href="/api/Airport">/api/Airport</a></li>
- <li><a href="/api/Flight/101">/api/Flight/101</a></li>
- <li><a href="/api/Flight">/api/Flight</a></li>
- <li><a href="/api/Flight/berlin">/api/Flight/berlin</a></li>
- <li><a href="/api/Flight/berlin/rome">/api/Flight/berlin/rome</a></li>
+ <li>Alle Flughäfen: <a href="/api/Airport">/api/Airport</a></li>
+ <li>Ein Flug: <a href="/api/Flight/101">/api/Flight/101</a></li>
+ <li>Alle Flüge: <a href="/api/Flight">/api/Flight</a></li>
+ <li>Filter auf Abflugort: <a href="/api/Flight/berlin">/api/Flight/berlin</a></li>
+ <li>Filter auf Flugroute:<a href="/api/Flight/berlin/rome"> /api/Flight/berlin/rome</a></li>
+ <li>Paging mit Abflugort: /<a href="/api/Flight/berlin/ /50/10">api/Flight/berlin/ /50/10</a></li>
+ <li>Paging mit Flugroute: <a href="/api/Flight/berlin/rome/10/5">/api/Flight/berlin/rome/10/5</a></li>
 </ul>
 
