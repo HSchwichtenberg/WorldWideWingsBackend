@@ -1,9 +1,9 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
  <PropertyGroup>
   <TargetFramework>net7.0</TargetFramework>
   <Nullable>enable</Nullable>
-  <Version>7.0.1</Version>
+  <Version>7.0.2</Version>
   <ImplicitUsings>enable</ImplicitUsings>
  </PropertyGroup>
 
@@ -37,6 +37,7 @@
   <SccProvider>SAK</SccProvider>
   <SccAuxPath>SAK</SccAuxPath>
   <SccLocalPath>SAK</SccLocalPath>
+  <UserSecretsId>d794fb8c-7e07-43f7-89fe-f149b3baa6bf</UserSecretsId>
  </PropertyGroup>
 
 </Project>
