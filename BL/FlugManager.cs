@@ -34,10 +34,10 @@ public class FlightManager : EntityManagerBase<WWWingsContext, Flight>
 
   // Eigentliche Logik für das Zusammensetzen der Abfrage
   if (!String.IsNullOrEmpty(Departure)) q = from f in q
-                                            where f.Departure == Departure
+                                            where f.Departure.Contains(Departure)
                                             select f;
 
-  if (!String.IsNullOrEmpty(Destination)) q = q.Where(f => f.Destination == Destination);
+  if (!String.IsNullOrEmpty(Destination)) q = q.Where(f => f.Destination.Contains(Destination));
 
   if (skip > -1) q = q.Skip(skip);
   if (take > -1) q = q.Take(take);
