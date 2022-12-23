@@ -13,7 +13,6 @@ public partial class WWWingsContext : DbContext
 {
  public static string ConnectionString { get; set; } = "Server=D120;Database=WWWingsV1_EN;Trusted_Connection=True;MultipleActiveResultSets=True;Encrypt=false";
 
-
  public WWWingsContext()
  {
   // this.Log();
