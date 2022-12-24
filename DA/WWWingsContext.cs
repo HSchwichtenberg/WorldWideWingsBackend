@@ -200,9 +200,7 @@ public partial class WWWingsContext : DbContext
              .IsRequired()
              .HasMaxLength(50);
    entity.Property(e => e.Memo).IsUnicode(false);
-   entity.Property(e => e.Planet)
-             .HasMaxLength(50)
-             .IsUnicode(false);
+
    entity.Property(e => e.Surname)
              .IsRequired()
              .HasMaxLength(50);

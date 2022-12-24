@@ -3,7 +3,7 @@
  <PropertyGroup>
   <TargetFramework>net7.0</TargetFramework>
   <Nullable>enable</Nullable>
-  <Version>7.0.5</Version>
+  <Version>7.0.6</Version>
   <ImplicitUsings>enable</ImplicitUsings>
  </PropertyGroup>
 

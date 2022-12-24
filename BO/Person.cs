@@ -74,20 +74,6 @@ public partial class Person : BOBase
       set => Set(value, ref _Memo); 
     }
 
-    private string _Planet;
-    public string Planet   
-    { 
-      get => _Planet ;
-      set => Set(value, ref _Planet); 
-    }
-
-    private string _Sternensystem;
-    public string Sternensystem   
-    { 
-      get => _Sternensystem ;
-      set => Set(value, ref _Sternensystem); 
-    }
-
     private Employee _Employee ;
 
     public Employee Employee
